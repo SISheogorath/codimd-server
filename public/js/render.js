@@ -1,7 +1,7 @@
 /* eslint-env browser, jquery */
 /* global filterXSS */
 // allow some attributes
-var whiteListAttr = ['id', 'class', 'style']
+var whiteListAttr = ['id', 'class', 'style', 'alt']
 window.whiteListAttr = whiteListAttr
 // allow link starts with '.', '/' and custom protocol with '://', exclude link starts with javascript://
 var linkRegex = /^(?!javascript:\/\/)([\w|-]+:\/\/)|^([.|/])+/i
