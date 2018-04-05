@@ -512,6 +512,58 @@ div[contenteditable]:empty:not(:focus):before{
     margin: -3px 0 0;
 }
 
+.editorToolbar {
+    background-color: #1c1c1e;
+    color: #FFF;
+    padding: 0px 0 0 25px;
+}
+
+.editorToolbar > ul {
+	list-style: none;
+  margin-bottom: 0px;
+}
+.editorToolbar > ul > li {
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.editorToolbar > ul > li:hover {
+	background-color: #212121;
+}
+.toolbarH1 {
+	font-size: 1.3em; font-weight: bold;
+}
+.toolbarH2 {
+	font-size: 1.1em; font-weight: bold;
+}
+.toolbarH3 {
+	font-size: 1.0em; font-weight: bold;
+}
+.toolbarStrong {
+	font-weight: bold;
+}
+.toolbarEm {
+    font-style: italic;
+}
+.toolbarU {
+	text-decoration: underline;
+
+}
+.toolbarA {
+    color: #aaf;
+    text-decoration: underline;
+}
+.toolbarLi {
+    /* background: transparent url("images/list-dot.png") no-repeat scroll center left; */
+    padding-left: 7px !important;
+}
+.toolbarImg span {
+    border: 1px solid #cbb;
+    padding: 0 2px;
+}
+
+
 .ui-theme-toggle,
 .ui-spellcheck-toggle {
     opacity: 0.2;
