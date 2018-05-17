@@ -15,6 +15,7 @@
     "doctoc": "doctoc --title='# Table of Contents' README.md"
   },
   "dependencies": {
+    "@phc/scrypt": "^1.0.1",
     "Idle.Js": "git+https://github.com/shawnmclean/Idle.js",
     "async": "^2.1.4",
     "aws-sdk": "^2.7.20",
