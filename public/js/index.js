@@ -3,7 +3,7 @@
    modeType, Idle, serverurl, key, gapi, Dropbox, FilePicker
    ot, MediaUploader, hex2rgb, num_loaded, Visibility */
 
-import {excelToMarkdown} from '../vendor/excel-to-markdown-table'
+import excelToMarkdown from '../vendor/excel-to-markdown-table'
 require('../vendor/showup/showup')
 
 require('../css/index.css')
@@ -305,8 +305,11 @@ var editor = editorInstance.init(textit)
 // FIXME: global referncing in jquery-textcomplete patch
 window.editor = editor
 
-var inlineAttach = inlineAttachment.editors.codemirror4.attach(editor)
+excelToMarkdown.attach(editor)
+//var inlineAttach = inlineAttachment.editors.codemirror4.attach(editor)
 defaultTextHeight = parseInt($('.CodeMirror').css('line-height'))
+
+
 
 //  initalize ui reference
 const ui = getUIElements()
@@ -1059,7 +1062,7 @@ ui.toolbar.uploadImage.bind('change', function (e) {
   var files = e.target.files || e.dataTransfer.files
   e.dataTransfer = {}
   e.dataTransfer.files = files
-  inlineAttach.onDrop(e)
+//  inlineAttach.onDrop(e)
 })
 // toc
 ui.toc.dropdown.click(function (e) {
@@ -2559,9 +2562,7 @@ editorInstance.on('beforeChange', function (cm, change) {
 editorInstance.on('cut', function () {
     // na
 })
-editorInstance.on('paste', function (event) {
-    excelToMarkdown(event)
-})
+
 editorInstance.on('changes', function (editor, changes) {
   updateHistory()
   var docLength = editor.getValue().length

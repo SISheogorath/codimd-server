@@ -32,73 +32,115 @@ function looksLikeTable(data) {
   return true
 }
 
-function excelToMarkdown(event) {
-  var clipboard = event.clipboardData
-  var data = clipboard.getData('text/plain').trim()
+var codeMirrorEditor = function(instance) {
 
-  if(looksLikeTable(data)) {
-    event.preventDefault()
-  }else{
-    return
+  if (!instance.getWrapperElement) {
+    throw "Invalid CodeMirror object given";
   }
 
-  var rows = data.split((/[\n\u0085\u2028\u2029]|\r\n?/g)).map(function(row) {
-    console.log(row)
-    return row.split("\t")
-  })
+  this.codeMirror = instance;
+};
 
-  var colAlignments = []
+module.exports.attach = function(codeMirror, options) {
 
-  var columnWidths = rows[0].map(function(column, columnIndex) {
-    var alignment = "l"
-    var re = /^(\^[lcr])/i
-    var m = column.match(re)
-    if (m) {
-        var align = m[1][1].toLowerCase()
-        if (align === "c") {
-          alignment = "c"
-        } else if (align === "r") {
-          alignment = "r"
-        }
-      }
-    colAlignments.push(alignment)
-    column = column.replace(re, "")
-    rows[0][columnIndex] = column
-    return columnWidth(rows, columnIndex)
-  })
-  var markdownRows = rows.map(function(row, rowIndex) {
-    // | Name         | Title | Email Address  |
-    // |--------------|-------|----------------|
-    // | Jane Atler   | CEO   | jane@acme.com  |
-    // | John Doherty | CTO   | john@acme.com  |
-    // | Sally Smith  | CFO   | sally@acme.com |
-    return "| " + row.map(function(column, index) {
-      return column + Array(columnWidths[index] - column.length + 1).join(" ")
-    }).join(" | ") + " |"
-    row.map
+  options = options || {};
 
-  })
-  markdownRows.splice(1, 0, "|" + columnWidths.map(function(width, index) {
-    var prefix = ""
-    var postfix = ""
-    var adjust = 0
-    var alignment = colAlignments[index]
-    if (alignment === "r") {
-      postfix = ":"
-      adjust = 1
-    } else if (alignment == "c") {
-      prefix = ":"
-      postfix = ":"
-      adjust = 2
+  var editor = new codeMirrorEditor(codeMirror)
+  var  excelToMarkdown = new excelToMarkdown(editor)
+  var el = codeMirror.getWrapperElement()
+  el.addEventListener('paste', excelToMarkdown.onPaste);
+
+  return excelToMarkdown
+}
+
+var excelToMarkdown = function excelToMarkdown(editor) {
+  function onPaste(event) {
+    var clipboard = (event.clipboardData || window.clipboardData)
+    var data = clipboard.getData('text/plain').trim()
+
+    console.log(data)
+    if(looksLikeTable(data)) {
+      event.preventDefault()
+    }else{
+      return
     }
-    return prefix + Array(columnWidths[index] + 3 - adjust).join("-") + postfix
-  }).join("|") + "|")
 
-  // https://www.w3.org/TR/clipboard-apis/#the-paste-action
-  // When pasting, the drag data store mode flag is read-only, hence calling
-  // setData() from a paste event handler will not modify the data that is
-  // inserted, and not modify the data on the clipboard.
+    var rows = data.split((/[\n\u0085\u2028\u2029]|\r\n?/g)).map(function(row) {
+      console.log(row)
+      return row.split("\t")
+    })
 
-  event.target.value = markdownRows.join("\n")
-  return false
+    var colAlignments = []
+
+    var columnWidths = rows[0].map(function(column, columnIndex) {
+      var alignment = "l"
+      var re = /^(\^[lcr])/i
+      var m = column.match(re)
+      if (m) {
+          var align = m[1][1].toLowerCase()
+          if (align === "c") {
+            alignment = "c"
+          } else if (align === "r") {
+            alignment = "r"
+          }
+        }
+      colAlignments.push(alignment)
+      column = column.replace(re, "")
+      rows[0][columnIndex] = column
+      return columnWidth(rows, columnIndex)
+    })
+    var markdownRows = rows.map(function(row, rowIndex) {
+      // | Name         | Title | Email Address  |
+      // |--------------|-------|----------------|
+      // | Jane Atler   | CEO   | jane@acme.com  |
+      // | John Doherty | CTO   | john@acme.com  |
+      // | Sally Smith  | CFO   | sally@acme.com |
+      return "| " + row.map(function(column, index) {
+        return column + Array(columnWidths[index] - column.length + 1).join(" ")
+      }).join(" | ") + " |"
+      row.map
+
+    })
+    markdownRows.splice(1, 0, "|" + columnWidths.map(function(width, index) {
+      var prefix = ""
+      var postfix = ""
+      var adjust = 0
+      var alignment = colAlignments[index]
+      if (alignment === "r") {
+        postfix = ":"
+        adjust = 1
+      } else if (alignment == "c") {
+        prefix = ":"
+        postfix = ":"
+        adjust = 2
+      }
+      return prefix + Array(columnWidths[index] + 3 - adjust).join("-") + postfix
+    }).join("|") + "|")
+
+    // https://www.w3.org/TR/clipboard-apis/#the-paste-action
+    // When pasting, the drag data store mode flag is read-only, hence calling
+    // setData() from a paste event handler will not modify the data that is
+    // inserted, and not modify the data on the clipboard.
+
+    event.preventDefault()
+    //event.target.value = markdownRows.join("\n")
+    var cm = this.editor
+    var cursor = cm.getCursor()
+    let ranges = cm.listSelections()
+
+    for (let i = 0; i < ranges.length; i++) {
+      let range = ranges[i]
+      if (!range.empty()) {
+        const from = range.from()
+        const to = range.to()
+        cm.replaceRange( markdownRows.join("\n"), from, to)
+      } else {
+        cm.replaceRange( markdownRows.join("\n"), cursor, cursor)
+      }
+    }
+    cm.setCursor({line: cursor.line, ch: cursor.ch + symbol.length})
+    cm.focus()
+    return false
+    }
+  this.editor = editor
 }
