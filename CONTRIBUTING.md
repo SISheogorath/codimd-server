@@ -53,6 +53,21 @@ This Code of Conduct is adapted from the [Contributor Covenant](http://contribut
 version 1.2.0, available at
 [http://contributor-covenant.org/version/1/2/0/](http://contributor-covenant.org/version/1/2/0/)
 
+### Child-friendly environment
+
+CodiMD is used schools and other places for education. A goal of the project is to provide a helpful and child-friendly environment and also allow students to participate, while being a good example of working together and towards a better future.
+
+To achieve this we should…
+
+- …actively support issues and pull requests from students
+- …teach working with git and other development tools
+- …provide easy access to the repository
+
+as well as…
+
+- …avoid inappropriate language
+- …enforcing our code of conduct
+
 ### Sign your work
 
 We use the Developer Certificate of Origin (DCO) as a additional safeguard
