@@ -481,7 +481,7 @@ div[contenteditable]:empty:not(:focus):before{
     display: inline;
 }
 
-.status-bar .status-file {
+.status-bar .status-file, .status-bar .status-words  {
     color: #9a9a9a;
 }
 

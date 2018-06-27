@@ -119,3 +119,10 @@ export function insertOnStartOfLines (cm, symbol) {
   cm.setCursor({line: cursor.line, ch: cursor.ch + symbol.length})
   cm.focus()
 }
+
+export function breakHTML(element) {
+  var html = element.innerHTML
+  element.innerHTML = html.replace(/<br\s*[\/]?>/gi, " ")
+  element.innerHTML = html.replace(/<\/([^>]+)>/gi, "< ")
+  return element
+}

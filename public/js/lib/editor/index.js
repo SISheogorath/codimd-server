@@ -228,6 +228,7 @@ export default class Editor {
     this.statusIndent = this.statusBar.find('.status-indent')
     this.statusKeymap = this.statusBar.find('.status-keymap')
     this.statusLength = this.statusBar.find('.status-length')
+    this.statusWords = this.statusBar.find('.status-words')
     this.statusTheme = this.statusBar.find('.status-theme')
     this.statusSpellcheck = this.statusBar.find('.status-spellcheck')
     this.statusPreferences = this.statusBar.find('.status-preferences')
@@ -250,6 +251,16 @@ export default class Editor {
     this.statusCursor.text(cursorText)
     var fileText = ' — ' + editor.lineCount() + ' Lines'
     this.statusFile.text(fileText)
+    var wordcount = function (subElement) {
+      var subElement = utils.breakHTML(subElement.cloneNode(true))
+      var elements = subElement.getElementsByTagName('pre')
+      while (elements[0]) elements[0].parentNode.removeChild(elements[0])
+      console.log(subElement.textContent)
+      console.log((subElement.textContent).split(/(?:[\s\n\r]+)/))
+      return ((subElement.textContent).split(/(?:\s\n\r+)/)).length
+    }
+    var wordsText = ', ' + wordcount(document.getElementById("doc")) + ' Words'
+    this.statusWords.text(wordsText)
     var docLength = editor.getValue().length
     this.statusLength.text('Length ' + docLength)
     if (docLength > (config.docmaxlength * 0.95)) {
