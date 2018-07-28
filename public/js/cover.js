@@ -72,11 +72,11 @@ $('.masthead-nav li').click(function () {
 })
 
 // prevent empty link change hash
-$('a[href="#"]').click(function (e) {
-  e.preventDefault()
+$('a[href="#"]').click(event => {
+  event.preventDefault()
 })
 
-$('.ui-home').click(function (e) {
+$('.ui-home').click(() => {
   if (!$('#home').is(':visible')) {
     $('.section:visible').hide()
     $('#home').fadeIn()
@@ -232,7 +232,7 @@ $('.ui-use-tags').select2({
 $('.select2-input').css('width', 'inherit')
 filtertags = buildTagsFilter([])
 
-$('.ui-use-tags').on('change', function () {
+$('.ui-use-tags').on('change', () => {
   const tags = []
   const data = $(this).select2('data')
   for (let i = 0; i < data.length; i++) { tags.push(data[i].text) }
