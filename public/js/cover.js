@@ -7,25 +7,25 @@ require('../css/cover.css')
 require('../css/site.css')
 
 import {
-    checkIfAuth,
-    clearLoginState,
-    getLoginState,
-    resetCheckAuth,
-    setloginStateChangeEvent
+  checkIfAuth,
+  clearLoginState,
+  getLoginState,
+  resetCheckAuth,
+  setloginStateChangeEvent
 } from './lib/common/login'
 
 import {
-    clearDuplicatedHistory,
-    deleteServerHistory,
-    getHistory,
-    getStorageHistory,
-    parseHistory,
-    parseServerToHistory,
-    parseStorageToHistory,
-    postHistoryToServer,
-    removeHistory,
-    saveHistory,
-    saveStorageHistoryToServer
+  clearDuplicatedHistory,
+  deleteServerHistory,
+  getHistory,
+  getStorageHistory,
+  parseHistory,
+  parseServerToHistory,
+  parseStorageToHistory,
+  postHistoryToServer,
+  removeHistory,
+  saveHistory,
+  saveStorageHistoryToServer
 } from './history'
 
 import { saveAs } from 'file-saver'
