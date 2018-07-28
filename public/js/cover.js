@@ -166,9 +166,9 @@ function parseHistoryCallback (list, notehistory) {
 }
 
 // update items whenever list updated
-historyList.on('updated', e => {
-  for (let i = 0, l = e.items.length; i < l; i++) {
-    const item = e.items[i]
+historyList.on('updated', list => {
+  for (let i = 0, l = list.items.length; i < l; i++) {
+    const item = list.items[i]
     if (item.visible()) {
       const itemEl = $(item.elm)
       const values = item._values
@@ -201,8 +201,8 @@ historyList.on('updated', e => {
   $('.ui-history-pin').on('click', historyPinClick)
 })
 
-function historyCloseClick (e) {
-  e.preventDefault()
+function historyCloseClick (event) {
+  event.preventDefault()
   const id = $(this).closest('a').siblings('span').html()
   const value = historyList.get('id', id)[0]._values
   $('.ui-delete-history-modal-msg').text('Do you really want to delete below history?')
@@ -211,8 +211,8 @@ function historyCloseClick (e) {
   deleteId = id
 }
 
-function historyPinClick (e) {
-  e.preventDefault()
+function historyPinClick (event) {
+  event.preventDefault()
   const $this = $(this)
   const id = $this.closest('a').siblings('span').html()
   const item = historyList.get('id', id)[0]
@@ -319,8 +319,8 @@ $('.ui-save-history').click(() => {
   })
 })
 
-$('.ui-open-history').bind('change', e => {
-  const files = e.target.files || e.dataTransfer.files
+$('.ui-open-history').bind('change', event => {
+  const files = event.target.files || event.dataTransfer.files
   const file = files[0]
   const reader = new FileReader()
   reader.onload = () => {
