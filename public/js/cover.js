@@ -127,16 +127,14 @@ historyList.on('updated', list => {
 })
 
 // auto update item fromNow every minutes
-setInterval(updateItemFromNow, 60000)
-
-function updateItemFromNow () {
+setInterval(() => {
   const items = $('.item').toArray()
   for (let i = 0; i < items.length; i++) {
     const item = $(items[i])
     const timestamp = parseInt(item.find('.timestamp').text())
     item.find('.fromNow').text(moment(timestamp).fromNow())
   }
-}
+}, 60000)
 
 let clearHistory = false
 let deleteId = null
