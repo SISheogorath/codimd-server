@@ -137,19 +137,15 @@ function parseHistoryCallback (list, notehistory) {
     sortFunction (a, b) {
       const notea = a.values()
       const noteb = b.values()
+
+      // Check if one of the notes is pinned
       if (notea.pinned && !noteb.pinned) {
         return -1
       } else if (!notea.pinned && noteb.pinned) {
         return 1
-      } else {
-        if (notea.timestamp > noteb.timestamp) {
-          return -1
-        } else if (notea.timestamp < noteb.timestamp) {
-          return 1
-        } else {
-          return 0
-        }
       }
+
+      return noteb.timestamp - notea.timestamp
     }
   })
     // parse filter tags
