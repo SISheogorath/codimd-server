@@ -148,16 +148,17 @@ function parseHistoryCallback (list, notehistory) {
       return noteb.timestamp - notea.timestamp
     }
   })
-    // parse filter tags
+
+  // parse filter tags
   const filtertags = []
   for (let i = 0, l = list.items.length; i < l; i++) {
     const tags = list.items[i]._values.tags
-    if (tags && tags.length > 0) {
-      for (let j = 0; j < tags.length; j++) {
-                // push info filtertags if not found
-        let found = false
-        if (filtertags.includes(tags[j])) { found = true }
-        if (!found) { filtertags.push(tags[j]) }
+
+    // if there are any tags, iterate over them
+    for (let j = 0; tags && j < tags.length; j++) {
+      // push info filtertags if not found
+      if (!filtertags.includes(tags[j])) {
+        filtertags.push(tags[j])
       }
     }
   }
