@@ -12,7 +12,9 @@
         "db": {
             "dialect": "sqlite",
             "storage": "./db.codimd.sqlite"
-        }
+        },
+        "domain": "localhost",
+        "urlAddPort": true
     },
     "production": {
         "domain": "localhost",

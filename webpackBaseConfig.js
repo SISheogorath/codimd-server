@@ -352,7 +352,7 @@ module.exports = {
     path: path.join(__dirname, 'public/build'),
     publicPath: '/build/',
     filename: '[name].js',
-    baseUrl: '<%- url %>'
+    baseUrl: '<%- serverURL %>'
   },
 
   resolve: {
