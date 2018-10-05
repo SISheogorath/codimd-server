@@ -43,7 +43,7 @@ const options = {
               <div class="content">
                 <h4 class="text"></h4>
                 <p>
-                  <i><i class="fa fa-clock-o"></i> visited </i><i class="fromNow"></i>
+                  <i><i aria-hidden="true" class="fa fa-clock-o"></i> visited </i><i class="fromNow"></i>
                   <br>
                   <i class="timestamp" style="display:none;"></i>
                   <i class="time"></i>
@@ -209,7 +209,7 @@ function historyCloseClick (e) {
   const id = $(this).closest('a').siblings('span').html()
   const value = historyList.get('id', id)[0]._values
   $('.ui-delete-history-modal-msg').text('Do you really want to delete below history?')
-  $('.ui-delete-history-modal-item').html(`<i class="fa fa-file-text"></i> ${value.text}<br><i class="fa fa-clock-o"></i> ${value.time}`)
+  $('.ui-delete-history-modal-item').html(`<i aria-hidden="true" class="fa fa-file-text"></i> ${value.text}<br><i aria-hidden="true" class="fa fa-clock-o"></i> ${value.time}`)
   clearHistory = false
   deleteId = id
 }

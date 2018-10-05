@@ -620,7 +620,7 @@ function checkEditorStyle () {
     ui.area.resize.handle = $('.ui-resizable-handle')
   }
   if (!ui.area.resize.syncToggle.length) {
-    ui.area.resize.syncToggle = $('<button class="btn btn-lg btn-default ui-sync-toggle" title="Toggle sync scrolling"><i class="fa fa-link fa-fw"></i></button>')
+    ui.area.resize.syncToggle = $('<button class="btn btn-lg btn-default ui-sync-toggle" title="Toggle sync scrolling"><i aria-hidden="true" class="fa fa-link fa-fw"></i></button>')
     ui.area.resize.syncToggle.hover(function () {
       previousFocusOnEditor = editorHasFocus()
     }, function () {
@@ -709,7 +709,7 @@ function showStatus (type, num) {
   var shortStatus = ui.toolbar.shortStatus
   var status = ui.toolbar.status
   var label = $('<span class="label"></span>')
-  var fa = $('<i class="fa"></i>')
+  var fa = $('<i aria-hidden="true" class="fa"></i>')
   var msg = ''
   var shortMsg = ''
 
@@ -991,7 +991,7 @@ ui.toolbar.export.snippet.click(function () {
           $('#snippetExportModalLoading').hide()
         })
         .fail(function (data) {
-          showMessageModal('<i class="fa fa-gitlab"></i> Import from Snippet', 'Unable to fetch gitlab parameters :(', '', '', false)
+          showMessageModal('<i aria-hidden="true" class="fa fa-gitlab"></i> Import from Snippet', 'Unable to fetch gitlab parameters :(', '', '', false)
         })
         .always(function () {
           ui.spinner.hide()
@@ -1045,7 +1045,7 @@ ui.toolbar.import.snippet.click(function () {
           $('#snippetImportModalLoading').hide()
         })
         .fail(function (data) {
-          showMessageModal('<i class="fa fa-gitlab"></i> Import from Snippet', 'Unable to fetch gitlab parameters :(', '', '', false)
+          showMessageModal('<i aria-hidden="true" class="fa fa-gitlab"></i> Import from Snippet', 'Unable to fetch gitlab parameters :(', '', '', false)
         })
         .always(function () {
           ui.spinner.hide()
@@ -1119,9 +1119,9 @@ function parseRevisions (_revisions) {
       item.attr('data-revision-time', revision.time)
       if (lastRevision === revision.time) item.addClass('active')
       var itemHeading = $('<h5 class="list-group-item-heading"></h5>')
-      itemHeading.html('<i class="fa fa-clock-o"></i> ' + moment(revision.time).format('llll'))
+      itemHeading.html('<i aria-hidden="true" class="fa fa-clock-o"></i> ' + moment(revision.time).format('llll'))
       var itemText = $('<p class="list-group-item-text"></p>')
-      itemText.html('<i class="fa fa-file-text"></i> Length: ' + revision.length)
+      itemText.html('<i aria-hidden="true" class="fa fa-file-text"></i> Length: ' + revision.length)
       item.append(itemHeading).append(itemText)
       item.click(function (e) {
         var time = $(this).attr('data-revision-time')
@@ -1386,11 +1386,11 @@ $('#gistImportModalConfirm').click(function () {
   $('#gistImportModal').modal('hide')
   $('#gistImportModalContent').val('')
   if (!isValidURL(gisturl)) {
-    showMessageModal('<i class="fa fa-github"></i> Import from Gist', 'Not a valid URL :(', '', '', false)
+    showMessageModal('<i aria-hidden="true" class="fa fa-github"></i> Import from Gist', 'Not a valid URL :(', '', '', false)
   } else {
     var hostname = window.url('hostname', gisturl)
     if (hostname !== 'gist.github.com') {
-      showMessageModal('<i class="fa fa-github"></i> Import from Gist', 'Not a valid Gist URL :(', '', '', false)
+      showMessageModal('<i aria-hidden="true" class="fa fa-github"></i> Import from Gist', 'Not a valid Gist URL :(', '', '', false)
     } else {
       ui.spinner.show()
       $.get('https://api.github.com/gists/' + window.url('-1', gisturl))
@@ -1405,11 +1405,11 @@ $('#gistImportModalConfirm').click(function () {
                     })
                     replaceAll(contents)
                   } else {
-                    showMessageModal('<i class="fa fa-github"></i> Import from Gist', 'Unable to fetch gist files :(', '', '', false)
+                    showMessageModal('<i aria-hidden="true" class="fa fa-github"></i> Import from Gist', 'Unable to fetch gist files :(', '', '', false)
                   }
                 })
                 .fail(function (data) {
-                  showMessageModal('<i class="fa fa-github"></i> Import from Gist', 'Not a valid Gist URL :(', '', JSON.stringify(data), false)
+                  showMessageModal('<i aria-hidden="true" class="fa fa-github"></i> Import from Gist', 'Not a valid Gist URL :(', '', JSON.stringify(data), false)
                 })
                 .always(function () {
                   ui.spinner.hide()
@@ -1431,7 +1431,7 @@ $('#snippetImportModalConfirm').click(function () {
   $('#snippetImportModal').modal('hide')
   $('#snippetImportModalContent').val('')
   if (!/^.+\/snippets\/.+$/.test(snippeturl)) {
-    showMessageModal('<i class="fa fa-github"></i> Import from Snippet', 'Not a valid Snippet URL :(', '', '', false)
+    showMessageModal('<i aria-hidden="true" class="fa fa-github"></i> Import from Snippet', 'Not a valid Snippet URL :(', '', '', false)
   } else {
     ui.spinner.show()
     var accessToken = '?access_token=' + $('#snippetImportModalAccessToken').val()
@@ -1456,14 +1456,14 @@ $('#snippetImportModalConfirm').click(function () {
                       }
                     })
                     .fail(function (data) {
-                      showMessageModal('<i class="fa fa-gitlab"></i> Import from Snippet', 'Not a valid Snippet URL :(', '', JSON.stringify(data), false)
+                      showMessageModal('<i aria-hidden="true" class="fa fa-gitlab"></i> Import from Snippet', 'Not a valid Snippet URL :(', '', JSON.stringify(data), false)
                     })
                     .always(function () {
                       ui.spinner.hide()
                     })
             })
             .fail(function (data) {
-              showMessageModal('<i class="fa fa-gitlab"></i> Import from Snippet', 'Not a valid Snippet URL :(', '', JSON.stringify(data), false)
+              showMessageModal('<i aria-hidden="true" class="fa fa-gitlab"></i> Import from Snippet', 'Not a valid Snippet URL :(', '', JSON.stringify(data), false)
             })
   }
 })
@@ -1491,7 +1491,7 @@ $('#snippetExportModalConfirm').click(function () {
           $('#snippetExportModalLoading').hide()
           $('#snippetExportModal').modal('hide')
           var redirect = baseURL + '/' + $("#snippetExportModalProjects option[value='" + $('#snippetExportModalProjects').val() + "']").text() + '/snippets/' + ret.id
-          showMessageModal('<i class="fa fa-gitlab"></i> Export to Snippet', 'Export Successful!', redirect, 'View Snippet Here', true)
+          showMessageModal('<i aria-hidden="true" class="fa fa-gitlab"></i> Export to Snippet', 'Export Successful!', redirect, 'View Snippet Here', true)
         }
     )
 })
@@ -1515,7 +1515,7 @@ function importFromUrl (url) {
     // console.log(url);
   if (!url) return
   if (!isValidURL(url)) {
-    showMessageModal('<i class="fa fa-cloud-download"></i> Import from URL', 'Not a valid URL :(', '', '', false)
+    showMessageModal('<i aria-hidden="true" class="fa fa-cloud-download"></i> Import from URL', 'Not a valid URL :(', '', '', false)
     return
   }
   $.ajax({
@@ -1526,7 +1526,7 @@ function importFromUrl (url) {
       if (extension === 'html') { parseToEditor(data) } else { replaceAll(data) }
     },
     error: function (data) {
-      showMessageModal('<i class="fa fa-cloud-download"></i> Import from URL', 'Import failed :(', '', JSON.stringify(data), false)
+      showMessageModal('<i aria-hidden="true" class="fa fa-cloud-download"></i> Import from URL', 'Import failed :(', '', JSON.stringify(data), false)
     },
     complete: function () {
       ui.spinner.hide()
@@ -1620,32 +1620,32 @@ function updatePermission (newPermission) {
   var title = null
   switch (permission) {
     case 'freely':
-      label = '<i class="fa fa-leaf"></i> Freely'
+      label = '<i aria-hidden="true" class="fa fa-leaf"></i> Freely'
       title = 'Anyone can edit'
       break
     case 'editable':
-      label = '<i class="fa fa-shield"></i> Editable'
+      label = '<i aria-hidden="true" class="fa fa-shield"></i> Editable'
       title = 'Signed people can edit'
       break
     case 'limited':
-      label = '<i class="fa fa-id-card"></i> Limited'
+      label = '<i aria-hidden="true" class="fa fa-id-card"></i> Limited'
       title = 'Signed people can edit (forbid guest)'
       break
     case 'locked':
-      label = '<i class="fa fa-lock"></i> Locked'
+      label = '<i aria-hidden="true" class="fa fa-lock"></i> Locked'
       title = 'Only owner can edit'
       break
     case 'protected':
-      label = '<i class="fa fa-umbrella"></i> Protected'
+      label = '<i aria-hidden="true" class="fa fa-umbrella"></i> Protected'
       title = 'Only owner can edit (forbid guest)'
       break
     case 'private':
-      label = '<i class="fa fa-hand-stop-o"></i> Private'
+      label = '<i aria-hidden="true" class="fa fa-hand-stop-o"></i> Private'
       title = 'Only owner can view & edit'
       break
   }
   if (personalInfo.userid && window.owner && personalInfo.userid === window.owner) {
-    label += ' <i class="fa fa-caret-down"></i>'
+    label += ' <i aria-hidden="true" class="fa fa-caret-down"></i>'
     ui.infobar.permission.label.removeClass('disabled')
   } else {
     ui.infobar.permission.label.addClass('disabled')
@@ -2191,7 +2191,7 @@ var options = {
   item: '<li class="ui-user-item">' +
         '<span class="id" style="display:none;"></span>' +
         '<a href="#">' +
-            '<span class="pull-left"><i class="ui-user-icon"></i></span><span class="ui-user-name name"></span><span class="pull-right"><i class="fa fa-circle ui-user-status"></i></span>' +
+            '<span class="pull-left"><i class="ui-user-icon"></i></span><span class="ui-user-name name"></span><span class="pull-right"><i aria-hidden="true" class="fa fa-circle ui-user-status"></i></span>' +
         '</a>' +
         '</li>'
 }
@@ -2418,7 +2418,7 @@ function buildCursor (user) {
     cursorbar[0].style.height = defaultTextHeight + 'px'
     cursorbar[0].style.borderLeft = '2px solid ' + user.color
 
-    var icon = '<i class="fa ' + iconClass + '"></i>'
+    var icon = '<i aria-hidden="true" class="fa ' + iconClass + '"></i>'
 
     let cursortag = $('<div class="cursortag">' + icon + '&nbsp;<span class="name">' + user.name + '</span></div>')
     // cursortag[0].style.background = color;

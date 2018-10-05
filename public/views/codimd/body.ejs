@@ -7,7 +7,7 @@
             <small>
                 <span>
                     <span class="ui-lastchangeuser" style="display: none;">&thinsp;<i class="ui-user-icon small" data-toggle="tooltip" data-placement="right"></i></span>
-                    <span class="ui-no-lastchangeuser">&thinsp;<i class="fa fa-clock-o fa-fw" style="width: 18px;"></i></span>
+                    <span class="ui-no-lastchangeuser">&thinsp;<i aria-hidden="true" class="fa fa-clock-o fa-fw" style="width: 18px;"></i></span>
                     &nbsp;<span class="text-uppercase ui-status-lastchange"></span>
                     <span class="ui-lastchange text-uppercase"></span>
                 </span>
@@ -15,14 +15,14 @@
                     <a id="permissionLabel" class="ui-permission-label text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="permissionLabel">
-                        <li class="ui-permission-freely"<% if(!allowAnonymous && !allowAnonymousEdits) { %> style="display: none;"<% } %>><a><i class="fa fa-leaf fa-fw"></i> Freely - Anyone can edit</a></li>
-                        <li class="ui-permission-editable"><a><i class="fa fa-shield fa-fw"></i> Editable - Signed-in people can edit</a></li>
-                        <li class="ui-permission-limited"><a><i class="fa fa-id-card fa-fw"></i> Limited - Signed-in people can edit (forbid guests)</a></li>
-                        <li class="ui-permission-locked"><a><i class="fa fa-lock fa-fw"></i> Locked - Only owner can edit</a></li>
-                        <li class="ui-permission-protected"><a><i class="fa fa-umbrella fa-fw"></i> Protected - Only owner can edit (forbid guests)</a></li>
-                        <li class="ui-permission-private"><a><i class="fa fa-hand-stop-o fa-fw"></i> Private - Only owner can view &amp; edit</a></li>
+                        <li class="ui-permission-freely"<% if(!allowAnonymous && !allowAnonymousEdits) { %> style="display: none;"<% } %>><a><i aria-hidden="true" class="fa fa-leaf fa-fw"></i> Freely - Anyone can edit</a></li>
+                        <li class="ui-permission-editable"><a><i aria-hidden="true" class="fa fa-shield fa-fw"></i> Editable - Signed-in people can edit</a></li>
+                        <li class="ui-permission-limited"><a><i aria-hidden="true" class="fa fa-id-card fa-fw"></i> Limited - Signed-in people can edit (forbid guests)</a></li>
+                        <li class="ui-permission-locked"><a><i aria-hidden="true" class="fa fa-lock fa-fw"></i> Locked - Only owner can edit</a></li>
+                        <li class="ui-permission-protected"><a><i aria-hidden="true" class="fa fa-umbrella fa-fw"></i> Protected - Only owner can edit (forbid guests)</a></li>
+                        <li class="ui-permission-private"><a><i aria-hidden="true" class="fa fa-hand-stop-o fa-fw"></i> Private - Only owner can view &amp; edit</a></li>
                         <li class="divider"></li>
-                        <li class="ui-delete-note"><a><i class="fa fa-trash-o fa-fw"></i> Delete this note</a></li>
+                        <li class="ui-delete-note"><a><i aria-hidden="true" class="fa fa-trash-o fa-fw"></i> Delete this note</a></li>
                     </ul>
                 </span>
                 <br>
@@ -36,7 +36,7 @@
         <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
             <div class="pull-right dropdown">
                 <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
-                    <i class="fa fa-bars"></i>
+                    <i aria-hidden="true" class="fa fa-bars"></i>
                 </a>
                 <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
                 </ul>
@@ -72,7 +72,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-lock"></i> <%= __('This note is locked') %></h4>
+                <h4 class="modal-title" id="myModalLabel"><i aria-hidden="true" class="fa fa-lock"></i> <%= __('This note is locked') %></h4>
             </div>
             <div class="modal-body" style="color:black;">
                 <h5><%= __('Sorry, only owner can edit this note.') %></h5>
@@ -90,7 +90,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-exclamation-triangle"></i> <%= __('Reach the limit') %></h4>
+                <h4 class="modal-title" id="myModalLabel"><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> <%= __('Reach the limit') %></h4>
             </div>
             <div class="modal-body" style="color:black;">
                 <h5><%= __("Sorry, you've reached the max length this note can be.") %></h5>
@@ -172,7 +172,7 @@
                 <input type="url" class="form-control" placeholder="/projects/:id/snippets/:snippet_id" id="snippetImportModalContent" disabled="disabled">
             </div>
             <div class="modal-footer">
-                <span id="snippetImportModalLoading"><i class="fa fa-refresh fa-spin fa-fw"></i></span>
+                <span id="snippetImportModalLoading"><i aria-hidden="true" class="fa fa-refresh fa-spin fa-fw"></i></span>
                 <button type="button" class="btn btn-default" data-dismiss="modal"><%= __('Cancel') %></button>
                 <button type="button" class="btn btn-danger" id="snippetImportModalClear"><%= __('Clear') %></button>
                 <button type="button" class="btn btn-primary" id="snippetImportModalConfirm" disabled="disabled"><%= __('Import') %></button>
@@ -219,7 +219,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <span id="snippetExportModalLoading"><i class="fa fa-refresh fa-spin fa-fw"></i></span>
+                <span id="snippetExportModalLoading"><i aria-hidden="true" class="fa fa-refresh fa-spin fa-fw"></i></span>
                 <button type="button" class="btn btn-default" data-dismiss="modal"><%= __('Cancel') %></button>
                 <button type="button" class="btn btn-primary" id="snippetExportModalConfirm"><%= __('Export') %></button>
             </div>

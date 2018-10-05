@@ -1,7 +1,7 @@
 Release Notes
 ===
 
-<i class="fa fa-tag"></i> 1.2.1 <i class="fa fa-clock-o"></i> 2018-09-26 00:00
+<i aria-hidden="true" class="fa fa-tag"></i> 1.2.1 <i aria-hidden="true" class="fa fa-clock-o"></i> 2018-09-26 00:00
 ---
 
 ### Enhancements
@@ -50,7 +50,7 @@ Release Notes
 * [Miranda (ahihi)](https://github.com/ahihi)
 * [Ondřej Slabý (maxer456)](https://github.com/maxer456)
 
-<i class="fa fa-tag"></i> 1.2.0 <i class="fa fa-clock-o"></i> 2018-06-28 00:00
+<i aria-hidden="true" class="fa fa-tag"></i> 1.2.0 <i aria-hidden="true" class="fa fa-clock-o"></i> 2018-06-28 00:00
 ---
 
 ### Announcement
@@ -98,7 +98,7 @@ Release Notes
 * [TC Liu (liuderchi)](https://github.com/liuderchi)
 
 
-<i class="fa fa-tag"></i> 1.1.1-ce <i class="fa fa-clock-o"></i> 2018-05-23 12:00
+<i aria-hidden="true" class="fa fa-tag"></i> 1.1.1-ce <i aria-hidden="true" class="fa fa-clock-o"></i> 2018-05-23 12:00
 ---
 
 ### Security
@@ -119,7 +119,7 @@ Release Notes
 ### Honorable mentions
 * [Max Wu (jackycute)](https://github.com/jackycute)
 
-<i class="fa fa-tag"></i> 1.1.0-ce <i class="fa fa-clock-o"></i> 2018-04-06 12:00
+<i aria-hidden="true" class="fa fa-tag"></i> 1.1.0-ce <i aria-hidden="true" class="fa fa-clock-o"></i> 2018-04-06 12:00
 ---
 
 ### Security
@@ -183,7 +183,7 @@ Release Notes
 * [Tang TsungYi (vazontang)](https://github.com/vazontang)
 * [Zearin (Zearin)](https://github.com/Zearin)
 
-<i class="fa fa-tag"></i> 1.0.1-ce <i class="fa fa-clock-o"></i> 2018-01-19 15:00
+<i aria-hidden="true" class="fa fa-tag"></i> 1.0.1-ce <i aria-hidden="true" class="fa fa-clock-o"></i> 2018-01-19 15:00
 ---
 
 ### Security
@@ -197,7 +197,7 @@ Release Notes
 * Fix image alt-tag rendering
 * Fix Dropbox appkey
 
-<i class="fa fa-tag"></i> 1.0.0-ce <i class="fa fa-clock-o"></i> 2018-01-18 12:00
+<i aria-hidden="true" class="fa fa-tag"></i> 1.0.0-ce <i aria-hidden="true" class="fa fa-clock-o"></i> 2018-01-18 12:00
 ---
 ### License
 * Switch from MIT to AGPL
@@ -236,7 +236,7 @@ Release Notes
 * Refactor code styling
 * Refactor middleware to modules
 
-<i class="fa fa-tag"></i> 0.5.1 `Doppio` <i class="fa fa-clock-o"></i> 2017-03-23 00:20
+<i aria-hidden="true" class="fa fa-tag"></i> 0.5.1 `Doppio` <i aria-hidden="true" class="fa fa-clock-o"></i> 2017-03-23 00:20
 ---
 ### Enhancements
 * Update to indicate version in status API header
@@ -282,7 +282,7 @@ Release Notes
 ### Removes
 - Removed UTF-8 BOM in download function
 
-<i class="fa fa-tag"></i> 0.5.0 `Ristretto` <i class="fa fa-clock-o"></i> 2017-01-02 02:35
+<i aria-hidden="true" class="fa fa-tag"></i> 0.5.0 `Ristretto` <i aria-hidden="true" class="fa fa-clock-o"></i> 2017-01-02 02:35
 ---
 ### Enhancements
 * Update year to 2017 (Happy New Year!)
@@ -311,7 +311,7 @@ Release Notes
 - Remove LZString compression for data storage
 - Remove LZString compression for some socket.io event data
 
-<i class="fa fa-tag"></i> 0.4.6 `Melya` <i class="fa fa-clock-o"></i> 2016-12-19 17:20
+<i aria-hidden="true" class="fa fa-tag"></i> 0.4.6 `Melya` <i aria-hidden="true" class="fa fa-clock-o"></i> 2016-12-19 17:20
 ---
 ### Features
 + Add support of allow free url config option
@@ -370,7 +370,7 @@ Release Notes
 - Drop bower the package manager
 - Remove auto linkify image
 
-<i class="fa fa-tag"></i> 0.4.5 `latte` <i class="fa fa-clock-o"></i> 2016-10-11 01:22
+<i aria-hidden="true" class="fa fa-tag"></i> 0.4.5 `latte` <i aria-hidden="true" class="fa fa-clock-o"></i> 2016-10-11 01:22
 ---
 ### Features
 + Add more environment variables for server configuration
@@ -430,7 +430,7 @@ Release Notes
 ### Removes
 - Cancel updating history on page unload
 
-<i class="fa fa-tag"></i> 0.4.4 `mocha` <i class="fa fa-clock-o"></i> 2016-08-02 17:10
+<i aria-hidden="true" class="fa fa-tag"></i> 0.4.4 `mocha` <i aria-hidden="true" class="fa fa-clock-o"></i> 2016-08-02 17:10
 ---
 ### Features
 * Add support of showing authorship in editor
@@ -474,7 +474,7 @@ Release Notes
 * Fix retryOnDisconnect not clean up after reconnected
 * Fix some potential memory leaks
 
-<i class="fa fa-tag"></i> 0.4.3 `espresso` <i class="fa fa-clock-o"></i> 2016-06-28 02:04
+<i aria-hidden="true" class="fa fa-tag"></i> 0.4.3 `espresso` <i aria-hidden="true" class="fa fa-clock-o"></i> 2016-06-28 02:04
 ---
 ### Features
 * Add support of spellcheck
@@ -511,7 +511,7 @@ Release Notes
 - Remove robot meta on note edit page and html template
 
 
-<i class="fa fa-tag"></i> 0.4.2 `cappuccino` <i class="fa fa-clock-o"></i> 2016-04-22 10:43
+<i aria-hidden="true" class="fa fa-tag"></i> 0.4.2 `cappuccino` <i aria-hidden="true" class="fa fa-clock-o"></i> 2016-04-22 10:43
 ---
 ### Features
 + Support sync scrolling to edit area
@@ -537,7 +537,7 @@ Release Notes
 * Fix to change fullscreen key to avoid OS key conflicts
 * Fix and change ESC key in Vim mode
 
-<i class="fa fa-tag"></i> 0.4.1 <i class="fa fa-clock-o"></i> 2016-04-22 10:43
+<i aria-hidden="true" class="fa fa-tag"></i> 0.4.1 <i aria-hidden="true" class="fa fa-clock-o"></i> 2016-04-22 10:43
 ---
 ### Enhancements
 * Support when client domain not provided will use window.location variable
@@ -545,7 +545,7 @@ Release Notes
 * Support DOMAIN and URL_PATH environment variables
 
 
-<i class="fa fa-tag"></i> 0.4.0 `first-year` <i class="fa fa-clock-o"></i> 2016-04-20 14:30
+<i aria-hidden="true" class="fa fa-tag"></i> 0.4.0 `first-year` <i aria-hidden="true" class="fa fa-clock-o"></i> 2016-04-20 14:30
 ---
 ### Features
 + Support docs
@@ -593,7 +593,7 @@ Release Notes
 * Fix Japanese, Chinese font styles
 * Fix minor bugs of UI and seletor syntaxes
 
-<i class="fa fa-tag"></i> 0.3.4 `techstars` <i class="fa fa-clock-o"></i> 2016-01-19 00:22
+<i aria-hidden="true" class="fa fa-tag"></i> 0.3.4 `techstars` <i aria-hidden="true" class="fa fa-clock-o"></i> 2016-01-19 00:22
 ---
 ### Features
 + Beta Support slide mode
@@ -625,7 +625,7 @@ Release Notes
 * Fixed mathjax might not parse properly
 * Fixed sequence diagram might render multiple times
 
-<i class="fa fa-tag"></i> 0.3.3 `moon-festival` <i class="fa fa-clock-o"></i> 2015-09-27 14:00
+<i aria-hidden="true" class="fa fa-tag"></i> 0.3.3 `moon-festival` <i aria-hidden="true" class="fa fa-clock-o"></i> 2015-09-27 14:00
 ---
 ### Features
 + Added status bar below editor
@@ -655,7 +655,7 @@ Release Notes
 * Fixed history might not delete or clear properly
 * Fixed server might not clean client properly
 
-<i class="fa fa-tag"></i> 0.3.2 `typhoon` <i class="fa fa-clock-o"></i> 2015-07-11 12:30
+<i aria-hidden="true" class="fa fa-tag"></i> 0.3.2 `typhoon` <i aria-hidden="true" class="fa fa-clock-o"></i> 2015-07-11 12:30
 ---
 ### Features
 + Support operational transformation
@@ -670,7 +670,7 @@ Release Notes
 * Optimized building syncscroll map, make it faster
 * Optimized SEO on publish and edit note
 
-<i class="fa fa-tag"></i> 0.3.1 `clearsky` <i class="fa fa-clock-o"></i> 2015-06-30 16:00
+<i aria-hidden="true" class="fa fa-tag"></i> 0.3.1 `clearsky` <i aria-hidden="true" class="fa fa-clock-o"></i> 2015-06-30 16:00
 ---
 ### Features
 + Added auto table of content
@@ -688,7 +688,7 @@ Release Notes
 * Blockquote tag not parsed properly
 * History style not correct
 
-<i class="fa fa-tag"></i> 0.3.0 `sunrise` <i class="fa fa-clock-o"></i> 2015-06-15 24:00
+<i aria-hidden="true" class="fa fa-tag"></i> 0.3.0 `sunrise` <i aria-hidden="true" class="fa fa-clock-o"></i> 2015-06-15 24:00
 ---
 ### Enhancements
 * Used short url in share notes
@@ -706,7 +706,7 @@ Release Notes
 * Note title might not save properly
 * Todo list not render properly
 
-<i class="fa fa-tag"></i> 0.2.9 `wildfire` <i class="fa fa-clock-o"></i> 2015-05-30 14:00
+<i aria-hidden="true" class="fa fa-tag"></i> 0.2.9 `wildfire` <i aria-hidden="true" class="fa fa-clock-o"></i> 2015-05-30 14:00
 ---
 ### Features
 + Support text auto complete
@@ -730,7 +730,7 @@ Release Notes
 * Detect editor focus not accurate
 * Server not handle some editor events
 
-<i class="fa fa-tag"></i> 0.2.8 `flame` <i class="fa fa-clock-o"></i> 2015-05-15 12:00
+<i aria-hidden="true" class="fa fa-tag"></i> 0.2.8 `flame` <i aria-hidden="true" class="fa fa-clock-o"></i> 2015-05-15 12:00
 ---
 ### Features
 + Support drag-n-drop(exclude firefox) and paste image inline
@@ -746,7 +746,7 @@ Release Notes
 * Partial update in the front and the end might not render properly
 * Server not handle some editor events
 
-<i class="fa fa-tag"></i> 0.2.7 `fuel` <i class="fa fa-clock-o"></i> 2015-05-03 12:00
+<i aria-hidden="true" class="fa fa-tag"></i> 0.2.7 `fuel` <i aria-hidden="true" class="fa fa-clock-o"></i> 2015-05-03 12:00
 ---
 ### Features
 + Support facebook, twitter, github, dropbox login
@@ -761,7 +761,7 @@ Release Notes
 * Partial update might not render properly
 * Cursor focus might not at correct position
 
-<i class="fa fa-tag"></i> 0.2.6 `zippo` <i class="fa fa-clock-o"></i> 2015-04-24 16:00
+<i aria-hidden="true" class="fa fa-tag"></i> 0.2.6 `zippo` <i aria-hidden="true" class="fa fa-clock-o"></i> 2015-04-24 16:00
 ---
 ### Features
 + Support sync scroll
@@ -779,7 +779,7 @@ Release Notes
 * Server might not disconnect client properly
 * Resume connection might restore wrong info
 
-<i class="fa fa-tag"></i> 0.2.5 `lightning` <i class="fa fa-clock-o"></i> 2015-04-14 21:10
+<i aria-hidden="true" class="fa fa-tag"></i> 0.2.5 `lightning` <i aria-hidden="true" class="fa fa-clock-o"></i> 2015-04-14 21:10
 ---
 ### Features
 + Support import from dropbox and clipboard
@@ -796,7 +796,7 @@ Release Notes
 * Virtual keyboard might broken the navbar
 * Adjust editor viewportMargin for preloading content
 
-<i class="fa fa-tag"></i> 0.2.4 `flint` <i class="fa fa-clock-o"></i> 2015-04-10 12:40
+<i aria-hidden="true" class="fa fa-tag"></i> 0.2.4 `flint` <i aria-hidden="true" class="fa fa-clock-o"></i> 2015-04-10 12:40
 ---
 ### Features
 + Support save to dropbox
@@ -809,7 +809,7 @@ Release Notes
 * Code border style might not show properly
 * Server might not connect concurrent client properly
 
-<i class="fa fa-tag"></i> 0.2.3 `light` <i class="fa fa-clock-o"></i> 2015-04-06 20:30
+<i aria-hidden="true" class="fa fa-tag"></i> 0.2.3 `light` <i aria-hidden="true" class="fa fa-clock-o"></i> 2015-04-06 20:30
 ---
 ### Features
 + Support youtube, vimeo
@@ -831,7 +831,7 @@ Release Notes
 * Prevent using real script and iframe tags
 * Sorting in history by time not percise
 
-<i class="fa fa-tag"></i> 0.2.2 `fire` <i class="fa fa-clock-o"></i> 2015-03-27 21:10
+<i aria-hidden="true" class="fa fa-tag"></i> 0.2.2 `fire` <i aria-hidden="true" class="fa fa-clock-o"></i> 2015-03-27 21:10
 ---
 ### Features
 + Support smartLists, smartypants
@@ -848,7 +848,7 @@ Release Notes
 * Toolbar links might get wrong
 * Wrong action redirections
 
-<i class="fa fa-tag"></i> 0.2.1 `spark` <i class="fa fa-clock-o"></i> 2015-03-17 13:40
+<i aria-hidden="true" class="fa fa-tag"></i> 0.2.1 `spark` <i aria-hidden="true" class="fa fa-clock-o"></i> 2015-03-17 13:40
 ---
 
 ### Features
@@ -863,7 +863,7 @@ Release Notes
 + Added code fold and fold gutters
 + Added continue listing of markdown
 
-<i class="fa fa-tag"></i> 0.2.0 `launch-day` <i class="fa fa-clock-o"></i> 2015-03-14 20:20
+<i aria-hidden="true" class="fa fa-tag"></i> 0.2.0 `launch-day` <i aria-hidden="true" class="fa fa-clock-o"></i> 2015-03-14 20:20
 ---
 ### Features
 

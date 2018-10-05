@@ -3,7 +3,7 @@ Features
 
 Introduction
 ===
-<i class="fa fa-file-text"></i> **CodiMD** is a real-time, multi-platform collaborative markdown note editor.
+<i aria-hidden="true" class="fa fa-file-text"></i> **CodiMD** is a real-time, multi-platform collaborative markdown note editor.
 This means that you can write notes with other people on your **desktop**, **tablet** or even on the **phone**.
 You can sign-in via multiple auth providers like **Facebook**, **Twitter**, **GitHub** and many more on the [_homepage_](/).
 
@@ -16,36 +16,36 @@ Workspace
 ## Modes
 **Desktop & Tablet**
 
-<i class="fa fa-edit fa-fw"></i> Edit: See only the editor.
-<i class="fa fa-eye fa-fw"></i> View: See only the result.
-<i class="fa fa-columns fa-fw"></i> Both: See both in split view.
+<i aria-hidden="true" class="fa fa-edit fa-fw"></i> Edit: See only the editor.
+<i aria-hidden="true" class="fa fa-eye fa-fw"></i> View: See only the result.
+<i aria-hidden="true" class="fa fa-columns fa-fw"></i> Both: See both in split view.
 
 **Mobile**
 
-<i class="fa fa-toggle-on fa-fw"></i> View: See only the result.
-<i class="fa fa-toggle-off fa-fw"></i> Edit: See only the editor.
+<i aria-hidden="true" class="fa fa-toggle-on fa-fw"></i> View: See only the result.
+<i aria-hidden="true" class="fa fa-toggle-off fa-fw"></i> Edit: See only the editor.
 
 ## Night Mode:
-When you are tired of a white screen and like a night mode, click on the little moon <i class="fa fa-moon-o"></i> and turn on the night view of CodiMD.
+When you are tired of a white screen and like a night mode, click on the little moon <i aria-hidden="true" class="fa fa-moon-o"></i> and turn on the night view of CodiMD.
 
-The editor view, which is in night mode by default, can also be toggled between night and day view using the the little sun<i class="fa fa-sun-o fa-fw"></i>.
+The editor view, which is in night mode by default, can also be toggled between night and day view using the the little sun<i aria-hidden="true" class="fa fa-sun-o fa-fw"></i>.
 
 ## Image Upload:
-You can upload an image simply by clicking on the camera button <i class="fa fa-camera"></i>.
+You can upload an image simply by clicking on the camera button <i aria-hidden="true" class="fa fa-camera"></i>.
 Alternatively, you can **drag-n-drop** an image into the editor. Even **pasting** images is possible!
 This will automatically upload the image to **[imgur](http://imgur.com)**, **[Amazon S3](https://aws.amazon.com/s3/)**, **[Minio](https://minio.io)** or **local filesystem**, nothing to worry about. :tada:
 ![imgur](https://i.imgur.com/9cgQVqD.png)
 
 ## Share Notes:
 If you want to share an **editable** note, just copy the URL.
-If you want to share a **read-only** note, simply press publish button <i class="fa fa-share-square-o"></i> and copy the URL.
+If you want to share a **read-only** note, simply press publish button <i aria-hidden="true" class="fa fa-share-square-o"></i> and copy the URL.
 
 ## Save a Note:
-Currently, you can save to **Dropbox** <i class="fa fa-dropbox"></i> or save an `.md` file <i class="fa fa-file-text"></i> locally.
+Currently, you can save to **Dropbox** <i aria-hidden="true" class="fa fa-dropbox"></i> or save an `.md` file <i aria-hidden="true" class="fa fa-file-text"></i> locally.
 
 ## Import Notes:
-Similarly to the _save_ feature, you can also import an `.md` file from **Dropbox** <i class="fa fa-dropbox"></i>,
-or import content from your **clipboard** <i class="fa fa-clipboard"></i>, and that can parse some **html** which might be useful :smiley:
+Similarly to the _save_ feature, you can also import an `.md` file from **Dropbox** <i aria-hidden="true" class="fa fa-dropbox"></i>,
+or import content from your **clipboard** <i aria-hidden="true" class="fa fa-clipboard"></i>, and that can parse some **html** which might be useful :smiley:
 
 ## Permissions:
 It is possible to change the access permission to a note through the little button on the top right of the view.
@@ -53,12 +53,12 @@ There are four possible options:
 
 |                              |Owner read/write|Signed-in read|Signed-in write|Guest read|Guest write|
 |:-----------------------------|:--------------:|:------------:|:-------------:|:--------:|:---------:|
-|<span class="text-nowrap"><i class="fa fa-leaf fa-fw"></i> **Freely**</span>               |✔|✔|✔|✔|✔|
-|<span class="text-nowrap"><i class="fa fa-pencil fa-fw"></i> **Editable**</span>           |✔|✔|✔|✔|✖|
-|<span class="text-nowrap"><i class="fa fa-id-card fa-fw"></i> **Limited**</span>           |✔|✔|✔|✖|✖|
-|<span class="text-nowrap"><i class="fa fa-lock fa-fw"></i> **Locked**</span>               |✔|✔|✖|✔|✖|
-|<span class="text-nowrap"><i class="fa fa-umbrella fa-fw"></i> **Protected**</span>        |✔|✔|✖|✖|✖|
-|<span class="text-nowrap"><i class="fa fa-hand-stop-o fa-fw"></i> **Private**</span>       |✔|✖|✖|✖|✖|
+|<span class="text-nowrap"><i aria-hidden="true" class="fa fa-leaf fa-fw"></i> **Freely**</span>               |✔|✔|✔|✔|✔|
+|<span class="text-nowrap"><i aria-hidden="true" class="fa fa-pencil fa-fw"></i> **Editable**</span>           |✔|✔|✔|✔|✖|
+|<span class="text-nowrap"><i aria-hidden="true" class="fa fa-id-card fa-fw"></i> **Limited**</span>           |✔|✔|✔|✖|✖|
+|<span class="text-nowrap"><i aria-hidden="true" class="fa fa-lock fa-fw"></i> **Locked**</span>               |✔|✔|✖|✔|✖|
+|<span class="text-nowrap"><i aria-hidden="true" class="fa fa-umbrella fa-fw"></i> **Protected**</span>        |✔|✔|✖|✖|✖|
+|<span class="text-nowrap"><i aria-hidden="true" class="fa fa-hand-stop-o fa-fw"></i> **Private**</span>       |✔|✖|✖|✖|✖|
 
 
 **Only the owner of the note can change the note's permissions.**
@@ -72,19 +72,19 @@ Notes can be embedded as follows:
 
 ## [Slide Mode](./slide-example):
 You can use a special syntax to organize your note into slides.
-After that, you can use the **Slide Mode** <i class="fa fa-tv"></i> to make a presentation.
+After that, you can use the **Slide Mode** <i aria-hidden="true" class="fa fa-tv"></i> to make a presentation.
 Visit the above link for details.
 
 View
 ===
 ## Table of Contents:
-You can look at the bottom right section of the view area, there is a _ToC_ button <i class="fa fa-bars"></i>.
+You can look at the bottom right section of the view area, there is a _ToC_ button <i aria-hidden="true" class="fa fa-bars"></i>.
 Pressing that button will show you a current _Table of Contents_, and will highlight which section you're at.
 ToCs support up to **three header levels**.
 
 ## Permalink
 Every header will automatically add a permalink on the right side.
-You can hover and click <i class="fa fa-chain"></i> to anchor on it.
+You can hover and click <i aria-hidden="true" class="fa fa-chain"></i> to anchor on it.
 
 Edit:
 ===

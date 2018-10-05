@@ -235,9 +235,9 @@ timeregex = new RegExp(timeregex.source + notinhtmltagregex.source, 'g')
 
 function replaceExtraTags (html) {
   html = html.replace(coloregex, '<span class="color" data-color="$1"></span>')
-  html = html.replace(nameandtimeregex, '<small><i class="fa fa-user"></i> $1 <i class="fa fa-clock-o"></i> $2</small>')
-  html = html.replace(nameregex, '<small><i class="fa fa-user"></i> $1</small>')
-  html = html.replace(timeregex, '<small><i class="fa fa-clock-o"></i> $1</small>')
+  html = html.replace(nameandtimeregex, '<small><i aria-hidden="true" class="fa fa-user"></i> $1 <i aria-hidden="true" class="fa fa-clock-o"></i> $2</small>')
+  html = html.replace(nameregex, '<small><i aria-hidden="true" class="fa fa-user"></i> $1</small>')
+  html = html.replace(timeregex, '<small><i aria-hidden="true" class="fa fa-clock-o"></i> $1</small>')
   return html
 }
 

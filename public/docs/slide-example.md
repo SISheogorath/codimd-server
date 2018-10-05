@@ -268,7 +268,7 @@ Press `B` or `.` on your keyboard to pause the presentation. This is helpful whe
 
 ## Print your Slides
 
-Down below you can find a print icon<i class="fa fa-fw fa-print"></i>.
+Down below you can find a print icon<i aria-hidden="true" class="fa fa-fw fa-print"></i>.
 
 After you click on it, use the print function of your browser (either CTRL+P or cmd+P) to print the slides as PDF.
 
