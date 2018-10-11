@@ -4,11 +4,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-// Fix possible nofile-issues
-var fs = require('fs')
-var gracefulFs = require('graceful-fs')
-gracefulFs.gracefulify(fs)
-
 module.exports = {
   name: 'app',
   plugins: [
