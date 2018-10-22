@@ -1144,6 +1144,32 @@ const pdfPlugin = new Plugin(
       return div[0].outerHTML
     }
 )
+//
+// const gitHubEmbedPlugin = new Plugin(
+//
+//     /https:\/\/github.com\/([^\/]+)\/([^\/]+)\/blob\/([^\/]+)\/([^#]+)#L(\d+)(?:-L(\d+))?/,
+//     (match, utils) => {
+//       const repo = match[1] + '/' + match[2]
+//       const commit = match[3]
+//       const path = match[4]
+//       const startLine = match[5]
+//       const endLine = match[6] || startLine
+//       $.get(`https://raw.githubusercontent.com/${repo}/${commit}/${path}`, (data, status) => {
+//           const code = $('<code class="raw javascript"></code>')
+//           let content = []
+//           lines = data.split('\n')
+//           for (let i = startLine; i <= endLine && i < lines.length; i++) {
+//             content.push(lines[i])
+//           }
+//           code.innerHTML = content.join('\n')
+//
+//           if (window.viewAjaxCallback) window.viewAjaxCallback()
+//         }
+//       })
+//       // https://github.com/hackmdio/codimd/blob/d3ec67bbd7b21c6649f29b4763edd6e044b8e992/lib/realtime.js#L119-L177
+//       // https://raw.githubusercontent.com/hackmdio/codimd/d3ec67bbd7b21c6649f29b4763edd6e044b8e992/lib/realtime.js
+//     }
+// )
 
 // yaml meta, from https://github.com/eugeneware/remarkable-meta
 function get (state, line) {
