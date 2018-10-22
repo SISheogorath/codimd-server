@@ -515,16 +515,16 @@ function windowResizeInner (callback) {
   // refresh editor
   if (window.loaded) {
     if (editor.getOption('scrollbarStyle') === 'native') {
-      setTimeout(function () {
+      requestAnimationFrame(function () {
         clearMap()
         autoSyncscroll()
         updateScrollspy()
         if (callback && typeof callback === 'function') { callback() }
-      }, 1)
+      })
     } else {
       // force it load all docs at once to prevent scroll knob blink
       editor.setOption('viewportMargin', Infinity)
-      setTimeout(function () {
+      requestAnimationFrame(function () {
         clearMap()
         autoSyncscroll()
         editor.setOption('viewportMargin', viewportMargin)
@@ -534,7 +534,7 @@ function windowResizeInner (callback) {
         }
         updateScrollspy()
         if (callback && typeof callback === 'function') { callback() }
-      }, 1)
+      })
     }
   }
 }
@@ -2038,12 +2038,12 @@ socket.on('refresh', function (data) {
     window.loaded = true
     emitUserStatus() // send first user status
     updateOnlineStatus() // update first online status
-    setTimeout(function () {
+    requestAnimationFrame(function () {
       // work around editor not refresh or doc not fully loaded
       windowResizeInner()
       // work around might not scroll to hash
       scrollToHash()
-    }, 1)
+    })
   }
   if (editor.getOption('readOnly')) { editor.setOption('readOnly', false) }
 })

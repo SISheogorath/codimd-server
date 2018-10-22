@@ -125,7 +125,7 @@ $(window).resize(() => {
 $(document).ready(() => {
   windowResize()
   generateScrollspy()
-  setTimeout(scrollToHash, 0)
+  requestAnimationFrame(scrollToHash)
     // tooltip
   $('[data-toggle="tooltip"]').tooltip()
 })
