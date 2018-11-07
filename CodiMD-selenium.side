@@ -1,0 +1,435 @@
+{
+  "id": "c903189d-da56-4e14-abf2-c350a6331d9a",
+  "version": "1.1",
+  "name": "CodiMD",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "76232e2b-0c91-4046-a643-ef44c18cec6b",
+    "name": "Create new guest note",
+    "commands": [{
+      "id": "0ced249f-bd05-4801-b7ab-41a9a0d7af97",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c18bda77-0e0f-4a33-a01d-4b3fdc0550a3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05a8d9c7-c511-49c4-8848-b33ab065f359",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=New guest note",
+      "targets": [
+        ["linkText=New guest note", "linkText"],
+        ["css=.ui-signin:nth-child(3) > .btn-primary", "css:finder"],
+        ["xpath=//a[contains(text(),'New guest note')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[@href='http://localhost:3000/new']", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dedea078-e219-44bc-a4a0-60b7657c3b6e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.CodeMirror-line",
+      "targets": [
+        ["css=.CodeMirror-line", "css:finder"],
+        ["xpath=//div[7]/div/pre", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ccba9df-0c78-44d5-998a-e417bec2b943",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f568f9e7-2790-4449-8827-52070ed9fd45",
+      "comment": "",
+      "command": "type",
+      "target": "css=.CodeMirror textarea",
+      "targets": [
+        ["css=.CodeMirror textarea", "css:finder"],
+        ["xpath=//div[2]/div/textarea", "xpath:position"]
+      ],
+      "value": "Test some input"
+    }]
+  }, {
+    "id": "57e4e004-6605-411e-8ec0-b7c2efc7ca86",
+    "name": "Features page",
+    "commands": [{
+      "id": "afaecd40-d70f-4374-8cfd-c9603a893390",
+      "comment": "",
+      "command": "open",
+      "target": "/features",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77b6ec27-8b7c-4a82-b431-c7913ef3e5fe",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d306165-516d-4fd9-b654-e16d6c279338",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div.youtube > img",
+      "targets": [
+        ["css=div.youtube > img", "css"],
+        ["css=.youtube > img", "css:finder"],
+        ["xpath=//div[@id='doc']/div[2]/img", "xpath:idRelative"],
+        ["xpath=//div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07c7752f-cc96-473b-bf5b-182f98094e5d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div.vimeo > img",
+      "targets": [
+        ["css=div.vimeo > img", "css"],
+        ["css=.vimeo > img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i.vimeocdn.com/video/513759628_640.jpg')]", "xpath:img"],
+        ["xpath=//div[@id='doc']/div[3]/img", "xpath:idRelative"],
+        ["xpath=//div[3]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db5ec7f8-be74-4fa5-9812-2e6e8d8deb1d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div.gist-file",
+      "targets": [
+        ["css=div.gist-file", "css"],
+        ["css=.gist-file:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='doc']/p[33]/code/div/div", "xpath:idRelative"],
+        ["xpath=//p[33]/code/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2aae274-ce15-499e-a594-8f48dba2f892",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.gist-file:nth-child(2) > .gist-meta",
+      "targets": [
+        ["css=.gist-file:nth-child(2) > .gist-meta", "css:finder"],
+        ["xpath=//div[@id='doc']/p[33]/code/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//code/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a68c7ed-6e25-47f8-bb6a-713c4c603a9c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.slideshare iframe",
+      "targets": [
+        ["linkText=26 Disruptive & Technology Trends 2016 - 2018", "linkText"],
+        ["css=a[title=\"26 Disruptive & Technology Trends 2016 - 2018\"]", "css"],
+        ["css=strong:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'26 Disruptive & Technology Trends 2016 - 2018')]", "xpath:link"],
+        ["xpath=//div[@id='doc']/div[4]/div[2]/strong/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.slideshare.net/briansolis/26-disruptive-technology-trends-2016-2018-56796196')]", "xpath:href"],
+        ["xpath=//div[2]/strong/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d20236c2-ed73-4d2c-8a7e-73bf7937a4bf",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.speakerdeck iframe",
+      "targets": [
+        ["linkText=XXLCSS - How to scale CSS and keep your sanity", "linkText"],
+        ["css=a.sd-player-title-link", "css"],
+        ["css=.sd-player-title-name > .sd-player-title-link", "css:finder"],
+        ["xpath=//a[contains(text(),'XXLCSS - How to scale CSS and keep your sanity')]", "xpath:link"],
+        ["xpath=//div[@id='player']/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://speakerdeck.com/sugarenia/xxlcss-how-to-scale-css-and-keep-your-sanity')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e92fb401-e580-43ac-ad0c-52678e478383",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#MathJax-Span-27 > span > span:nth-child(3)",
+      "targets": [
+        ["css=#MathJax-Span-27 > span > span:nth-child(3)", "css:finder"],
+        ["xpath=//span[@id='MathJax-Span-27']/span/span[3]", "xpath:idRelative"],
+        ["xpath=//span[3]/span/span/span/span[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0762e629-5151-49bf-b3cd-f78f57807755",
+    "name": "Features page - Externals - YouTube",
+    "commands": [{
+      "id": "577c5510-58cd-4e8b-8c40-2ee435fcc332",
+      "comment": "",
+      "command": "open",
+      "target": "/features",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c0c09d3-510a-419a-acd0-f074d62710d1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "624d7185-3f42-43d1-880e-c504293028c6",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div.youtube > img",
+      "targets": [
+        ["css=div.youtube > img", "css"],
+        ["css=.youtube > img", "css:finder"],
+        ["xpath=//div[@id='doc']/div[2]/img", "xpath:idRelative"],
+        ["xpath=//div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "c746d4e4-64aa-4dea-abbc-cfcbdc4e6262",
+    "name": "Features page - Externals - Vimeo",
+    "commands": [{
+      "id": "d5f0f2a0-413c-494a-9844-295f5c1636f2",
+      "comment": "",
+      "command": "open",
+      "target": "/features",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7953f25-3506-4714-a987-5eabd2ff215e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22a932b1-0017-409c-878f-b272a2a03418",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div.vimeo > img",
+      "targets": [
+        ["css=div.vimeo > img", "css"],
+        ["css=.vimeo > img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i.vimeocdn.com/video/513759628_640.jpg')]", "xpath:img"],
+        ["xpath=//div[@id='doc']/div[3]/img", "xpath:idRelative"],
+        ["xpath=//div[3]/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "93870da7-5e41-46ce-9b9a-4eacbae8b634",
+    "name": "Features page - Externals - Gist",
+    "commands": [{
+      "id": "68a9361e-3403-4b85-ace8-1678dc651fea",
+      "comment": "",
+      "command": "open",
+      "target": "/features",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72d23e85-07e9-4d4f-bbaa-18f99e4debbb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b1144ac-dad5-4241-b508-7cde73d04178",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div.gist-file",
+      "targets": [
+        ["css=div.gist-file", "css"],
+        ["css=.gist-file:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='doc']/p[33]/code/div/div", "xpath:idRelative"],
+        ["xpath=//p[33]/code/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9200a50-2b11-4316-b01e-ee4e5bbb9b8f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.gist-file:nth-child(2) > .gist-meta",
+      "targets": [
+        ["css=.gist-file:nth-child(2) > .gist-meta", "css:finder"],
+        ["xpath=//div[@id='doc']/p[33]/code/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//code/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9940c37e-2c62-474f-8fdf-bc9ac0edfb17",
+    "name": "Features page - Externals - SlideShare",
+    "commands": [{
+      "id": "a8b207a1-7933-423d-92fe-1da9a4819bdb",
+      "comment": "",
+      "command": "open",
+      "target": "/features",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1cfd16e0-d9d6-49f7-b7e1-4e47380f5500",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a9e7e7c-6e62-41ba-91d4-64c13278b257",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.slideshare",
+      "targets": [
+        ["linkText=26 Disruptive & Technology Trends 2016 - 2018", "linkText"],
+        ["css=a[title=\"26 Disruptive & Technology Trends 2016 - 2018\"]", "css"],
+        ["css=strong:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'26 Disruptive & Technology Trends 2016 - 2018')]", "xpath:link"],
+        ["xpath=//div[@id='doc']/div[4]/div[2]/strong/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.slideshare.net/briansolis/26-disruptive-technology-trends-2016-2018-56796196')]", "xpath:href"],
+        ["xpath=//div[2]/strong/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3518ba44-0010-48a6-a0c9-a9e45181a051",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.slideshare iframe",
+      "targets": [
+        ["linkText=26 Disruptive & Technology Trends 2016 - 2018", "linkText"],
+        ["css=a[title=\"26 Disruptive & Technology Trends 2016 - 2018\"]", "css"],
+        ["css=strong:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'26 Disruptive & Technology Trends 2016 - 2018')]", "xpath:link"],
+        ["xpath=//div[@id='doc']/div[4]/div[2]/strong/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.slideshare.net/briansolis/26-disruptive-technology-trends-2016-2018-56796196')]", "xpath:href"],
+        ["xpath=//div[2]/strong/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5ea9e92e-c729-408c-b6f0-0e4e9f500066",
+    "name": "Features page - Externals - Speakerdeck",
+    "commands": [{
+      "id": "c8325bc5-176b-4429-b37b-d2589e383499",
+      "comment": "",
+      "command": "open",
+      "target": "/features",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8465ec7d-68a6-4b36-a39b-12a6afd33e0d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf1b0b68-7894-44ed-8c98-2094091ce68d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.speakerdeck iframe",
+      "targets": [
+        ["linkText=XXLCSS - How to scale CSS and keep your sanity", "linkText"],
+        ["css=a.sd-player-title-link", "css"],
+        ["css=.sd-player-title-name > .sd-player-title-link", "css:finder"],
+        ["xpath=//a[contains(text(),'XXLCSS - How to scale CSS and keep your sanity')]", "xpath:link"],
+        ["xpath=//div[@id='player']/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://speakerdeck.com/sugarenia/xxlcss-how-to-scale-css-and-keep-your-sanity')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "25e27446-dfe3-4b94-b2bb-ab0286ec51ee",
+    "name": "Features page - MathJax",
+    "commands": [{
+      "id": "ddd87383-2f85-4414-a3f5-cc5c648b6593",
+      "comment": "",
+      "command": "open",
+      "target": "/features",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "804bbd3d-a898-44e4-90a8-16098bdcd1cb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "560f770d-4502-438f-9c7d-df2e68110875",
+      "comment": "",
+      "command": "",
+      "target": "id=Features",
+      "targets": [
+        ["id=Features", "id"],
+        ["css=#Features", "css"],
+        ["css=#Features", "css:finder"],
+        ["xpath=//h1[@id='Features']", "xpath:attributes"],
+        ["xpath=//div[@id='doc']/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0263b2b-1b9d-462d-abd0-afddd71960d2",
+      "comment": "",
+      "command": "pause",
+      "target": "50",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "99c70346-d4fb-43ab-8c4d-ea5ef5f69ed5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div.MathJax_Display",
+      "targets": [
+        ["css=div.MathJax_Display", "css"],
+        ["css=.part:nth-child(98) .MathJax_Display", "css:finder"],
+        ["xpath=//div[@id='doc']/p[42]/span/div", "xpath:idRelative"],
+        ["xpath=//span/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "437d8c07-8685-49cc-a952-cf7245ea692d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#MathJax-Span-27 > span > span:nth-child(3)",
+      "targets": [
+        ["css=#MathJax-Span-27 > span > span:nth-child(3)", "css:finder"],
+        ["xpath=//span[@id='MathJax-Span-27']/span/span[3]", "xpath:idRelative"],
+        ["xpath=//span[3]/span/span/span/span[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "234b5434-9ac1-4d8c-8cc8-4c7e8d2916a0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["76232e2b-0c91-4046-a643-ef44c18cec6b"]
+  }, {
+    "id": "a47bd4e2-1379-49bb-bcd9-51881586dabf",
+    "name": "Features page",
+    "persistSession": false,
+    "parallel": true,
+    "timeout": 300,
+    "tests": ["57e4e004-6605-411e-8ec0-b7c2efc7ca86", "93870da7-5e41-46ce-9b9a-4eacbae8b634", "9940c37e-2c62-474f-8fdf-bc9ac0edfb17", "5ea9e92e-c729-408c-b6f0-0e4e9f500066", "c746d4e4-64aa-4dea-abbc-cfcbdc4e6262", "0762e629-5151-49bf-b3cd-f78f57807755", "25e27446-dfe3-4b94-b2bb-ab0286ec51ee"]
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}

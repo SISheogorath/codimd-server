@@ -39,3 +39,14 @@ jobs:
       script:
         - npm run jsonlint
       language: generic
+    - env: task=browser-test
+      addons:
+        chrome: stable
+      before_script:
+        - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version "$YARN_VERSION"
+        - export PATH="$HOME/.yarn/bin:$PATH"
+        - yarn install
+        - ./bin/setup
+        - node app.js &
+      script:
+        - node_modules/.bin/selenium-side-runner CodiMD-selenium.side
