@@ -9,6 +9,7 @@ require('../css/index.css')
 require('../css/extra.css')
 require('../css/slide-preview.css')
 require('../css/site.css')
+require('../css/clippy.css')
 
 require('highlight.js/styles/github-gist.css')
 
@@ -82,6 +83,8 @@ import Editor from './lib/editor'
 import getUIElements from './lib/editor/ui-elements'
 import modeType from './lib/modeType'
 import appState from './lib/appState'
+
+import clippy from 'clippyjs'
 
 var defaultTextHeight = 20
 var viewportMargin = 20
@@ -476,6 +479,11 @@ $(document).ready(function () {
   $(document).on('click', '.toggle-dropdown .dropdown-menu', function (e) {
     e.stopPropagation()
   })
+
+  clippy.load('Links', (agent) => {
+    agent.show();
+    agent.speak("Hey there, why are you so happy?")
+   });
 })
 // when page resize
 $(window).resize(function () {
