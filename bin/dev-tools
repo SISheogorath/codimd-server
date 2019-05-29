@@ -1,0 +1,35 @@
+#!/bin/sh
+
+EXIT_SUCCESS=0
+EXIT_ERROR=1
+EXIT_MISSING_COMMAND=126
+
+checkCommand() {
+  if ! command -v "$1" >/dev/null; then
+    echo "$1 is not installed" >&2
+    exit ${MISSING_COMMAND}
+  fi
+}
+
+setupUpstream() {
+  checkCommand git
+  checkCommand grep
+
+  if !git remote get-url upstream | grep -q 'codimd/server.git'; then
+    OLD_UPSTREAM="upstream_$(date -I)"
+    if git remote | grep -q 'upstream'; then
+      git remote -v
+      echo "Renaming remote upstream to $OLD_UPSTREAM"
+      git remote rename upstream "$OLD_UPSTREAM"
+    fi
+    echo "Adding new git remote upstream"
+    git remote add upstream git@github.com:codimd/server.git
+  fi
+}
+
+fixBranchHistory() {
+  checkCommand git
+  setupUpstream
+  echo "Rebasing current branch to upstream master and signing off all commits"
+  git pull -i --signoff --rebase --autostash upstream master
+}
