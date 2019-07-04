@@ -1,0 +1,46 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-450202:
+    - archiver > async > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - async > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - minio > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - mermaid > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - js-sequence-diagrams > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - archiver > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - mermaid > dagre-layout > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - archiver > zip-stream > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - archiver > archiver-utils > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - sequelize > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - mermaid > dagre-d3-renderer > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - winston > async > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - mermaid > dagre-d3-renderer > graphlib > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - mermaid > dagre-d3-renderer > dagre-layout > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - passport-saml > xml-encryption > async > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - mermaid > dagre-layout > graphlibrary > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - archiver > zip-stream > archiver-utils > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - turndown > jsdom > request-promise-native > request-promise-core > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
+    - mermaid > dagre-d3-renderer > dagre-layout > graphlibrary > lodash:
+        patched: '2019-07-04T04:53:28.603Z'
