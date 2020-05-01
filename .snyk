@@ -1,0 +1,64 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - async > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - archiver > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - js-sequence-diagrams > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - minio > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - sequelize > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - archiver > archiver-utils > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - archiver > async > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - winston > async > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - archiver > zip-stream > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > graphlibrary > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > dagre-layout > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > dagre-d3-renderer > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - archiver > zip-stream > archiver-utils > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - passport-saml > xml-encryption > async > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > dagre-layout > graphlibrary > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > dagre-d3-renderer > dagre-layout > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > dagre-d3-renderer > dagre-layout > graphlibrary > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - turndown > jsdom > request-promise-native > request-promise-core > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > documentation > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > documentation > @babel/core > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > documentation > @babel/preset-env > @babel/plugin-transform-block-scoping > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > documentation > @babel/preset-env > @babel/plugin-transform-modules-umd > @babel/helper-module-transforms > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > documentation > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > documentation > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > documentation > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > documentation > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
+    - mermaid > documentation > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-05-01T04:53:40.854Z'
